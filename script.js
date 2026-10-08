@@ -2,6 +2,17 @@ const properties = [...document.querySelectorAll(".property-card")];
 const filters = ["propertyType", "district", "budget", "rooms"].map((id) => document.getElementById(id));
 const resultCount = document.getElementById("resultCount");
 const emptyState = document.getElementById("emptyState");
+const searchPanel = document.querySelector(".search-panel");
+const searchToggle = document.getElementById("searchToggle");
+
+function setSearchPanelOpen(isOpen) {
+  searchPanel.classList.toggle("is-open", isOpen);
+  searchToggle.setAttribute("aria-expanded", String(isOpen));
+}
+
+searchToggle.addEventListener("click", () => {
+  setSearchPanelOpen(!searchPanel.classList.contains("is-open"));
+});
 
 window.addEventListener("scroll", () => {
   document.querySelector(".site-header").classList.toggle("is-scrolled", window.scrollY > 40);
@@ -23,6 +34,7 @@ function applyFilters() {
 
 document.getElementById("searchButton").addEventListener("click", () => {
   applyFilters();
+  setSearchPanelOpen(false);
   document.getElementById("catalog").scrollIntoView({ behavior: "smooth" });
 });
 document.getElementById("resetButton").addEventListener("click", () => {

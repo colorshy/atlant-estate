@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Atlant Estate — подбор бизнес- и премиальной недвижимости в Астане." />
     <title>Atlant Estate — недвижимость в Астане</title>
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=82" media="(min-width: 701px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=78" media="(max-width: 700px)" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -44,11 +46,12 @@
       </section>
 
       <section class="search-panel" aria-label="Поиск недвижимости">
-        <div class="search-heading">
+        <button class="search-heading" id="searchToggle" type="button" aria-expanded="false" aria-controls="propertyFilters">
           <span class="search-icon">⌕</span>
           <div><strong>Найдём ваше место</strong><small>Настройте параметры, и мы покажем подходящее</small></div>
-        </div>
-        <div class="filter-grid">
+          <span class="search-toggle-icon" aria-hidden="true">⌄</span>
+        </button>
+        <div class="filter-grid" id="propertyFilters">
           <label>Тип объекта<select id="propertyType"><option value="all">Любой тип</option><option value="apartment">Квартира</option><option value="house">Дом</option><option value="commercial">Коммерция</option></select></label>
           <label>Район<select id="district"><option value="all">Любой район</option><option value="yesil">Есиль</option><option value="nura">Нура</option><option value="almaty">Алматы</option></select></label>
           <label>Бюджет<select id="budget"><option value="all">Без ограничений</option><option value="under80">До 80 млн ₸</option><option value="80to150">80–150 млн ₸</option><option value="over150">От 150 млн ₸</option></select></label>
@@ -80,7 +83,7 @@
       </section>
 
       <section class="about-section section" id="about">
-        <div class="about-image"><img src="assets/office.png" alt="Офис Atlant Estate в Астане" /></div>
+        <div class="about-image"><img src="assets/office.png" alt="Офис Atlant Estate в Астане" width="1366" height="725" loading="lazy" decoding="async" /></div>
         <div class="about-copy">
           <p class="kicker">Почему Atlant Estate</p>
           <h2>Спокойный путь<br />к <em>своему месту</em></h2>
