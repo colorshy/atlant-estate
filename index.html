@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atlant Estate — подбор бизнес- и премиальной недвижимости в Астане." />
+    <title>Atlant Estate — недвижимость в Астане</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Atlant Estate — в начало">
+        <img src="assets/atlant-logo.png" alt="Atlant Estate" />
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a class="phone-link" href="tel:+77027537510">+7 702 753 75 10</a>
+        <a class="outline-button" href="https://wa.me/77027537510" target="_blank" rel="noreferrer">Написать в WhatsApp</a>
+      </div>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Пространство,<br /><em>в котором</em><br />хочется жить.</h1>
+          <a class="button button-dark" href="#catalog">Смотреть объекты <span>↗</span></a>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image"></div>
+        </div>
+        <div class="hero-bottom">
+          <div class="scroll-line"></div>
+          <span>Листайте, чтобы узнать больше</span>
+        </div>
+      </section>
+
+      <section class="search-panel" aria-label="Поиск недвижимости">
+        <div class="search-heading">
+          <span class="search-icon">⌕</span>
+          <div><strong>Найдём ваше место</strong><small>Настройте параметры, и мы покажем подходящее</small></div>
+        </div>
+        <div class="filter-grid">
+          <label>Тип объекта<select id="propertyType"><option value="all">Любой тип</option><option value="apartment">Квартира</option><option value="house">Дом</option><option value="commercial">Коммерция</option></select></label>
+          <label>Район<select id="district"><option value="all">Любой район</option><option value="yesil">Есиль</option><option value="nura">Нура</option><option value="almaty">Алматы</option></select></label>
+          <label>Бюджет<select id="budget"><option value="all">Без ограничений</option><option value="under80">До 80 млн ₸</option><option value="80to150">80–150 млн ₸</option><option value="over150">От 150 млн ₸</option></select></label>
+          <label>Комнаты<select id="rooms"><option value="all">Любое количество</option><option value="1-2">1–2 комнаты</option><option value="3">3 комнаты</option><option value="4+">4 и больше</option></select></label>
+          <button class="button button-accent" id="searchButton" type="button">Показать объекты <span>→</span></button>
+        </div>
+      </section>
+
+      <section class="section catalog-section" id="catalog">
+        <div class="section-heading">
+          <div><p class="kicker">Актуальная подборка</p><h2>Объекты, которые<br /><em>стоит увидеть</em></h2></div>
+          <div class="catalog-tools"><span id="resultCount">3 объекта</span><button class="text-button" type="button" id="resetButton">Сбросить фильтры <span>↗</span></button></div>
+        </div>
+        <div class="property-grid" id="propertyGrid">
+          <article class="property-card" data-type="apartment" data-district="yesil" data-budget="80to150" data-rooms="3">
+            <div class="property-image image-one"><span class="property-status">Новое</span><button class="save-button" aria-label="Сохранить объект" type="button">♡</button></div>
+            <div class="property-content"><div><h3>ЖК Highvill Ishim</h3><p>Есиль · 3-комнатная квартира</p></div><strong>128 000 000 ₸</strong><div class="property-meta"><span>126 м²</span><span>12 этаж</span><a href="#contact-form">Записаться на просмотр ↗</a></div></div>
+          </article>
+          <article class="property-card" data-type="house" data-district="nura" data-budget="over150" data-rooms="4+">
+            <div class="property-image image-two"><span class="property-status">Избранное</span><button class="save-button" aria-label="Сохранить объект" type="button">♡</button></div>
+            <div class="property-content"><div><h3>Коттедж в Green Hills</h3><p>Нура · загородный дом</p></div><strong>185 000 000 ₸</strong><div class="property-meta"><span>286 м²</span><span>8 соток</span><a href="#contact-form">Записаться на просмотр ↗</a></div></div>
+          </article>
+          <article class="property-card" data-type="commercial" data-district="almaty" data-budget="under80" data-rooms="all">
+            <div class="property-image image-three"><span class="property-status">Для бизнеса</span><button class="save-button" aria-label="Сохранить объект" type="button">♡</button></div>
+            <div class="property-content"><div><h3>Офис на Сарыарке</h3><p>Алматы · коммерческое помещение</p></div><strong>74 500 000 ₸</strong><div class="property-meta"><span>94 м²</span><span>2 этаж</span><a href="#contact-form">Записаться на просмотр ↗</a></div></div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState">По этим параметрам объектов пока нет. Оставьте заявку — мы соберём персональную подборку.</p>
+      </section>
+
+      <section class="about-section section" id="about">
+        <div class="about-image"><img src="assets/office.png" alt="Офис Atlant Estate в Астане" /></div>
+        <div class="about-copy">
+          <p class="kicker">Почему Atlant Estate</p>
+          <h2>Спокойный путь<br />к <em>своему месту</em></h2>
+          <p>Мы берём на себя поиск, проверку и переговоры, чтобы вы принимали решение с ясной головой. Вникаем в контекст — от маршрута до будущей стоимости объекта.</p>
+          <div class="about-points">
+            <div><span>Персональный подбор<br />под вашу задачу</span></div>
+            <div><span>Проверка документов<br />до сделки</span></div>
+          </div>
+          <a class="text-button" href="#contact-form">Обсудить задачу <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="services-section section" id="services">
+        <div class="section-heading"><div><p class="kicker">С чем поможем</p><h2>Всё важное —<br /><em>в одном месте</em></h2></div><p class="section-intro">От первого вопроса до ключей в руках — рядом с вами на каждом шаге.</p></div>
+        <div class="service-list">
+          <div class="service-item"><h3>Покупка</h3><p>Найдём объект, который соответствует вашим планам, бюджету и срокам.</p><a href="#contact-form">Подробнее ↗</a></div>
+          <div class="service-item"><h3>Продажа</h3><p>Подготовим объект, определим стратегию и найдём заинтересованного покупателя.</p><a href="#contact-form">Подробнее ↗</a></div>
+          <div class="service-item"><h3>Инвестиции</h3><p>Оценим потенциал локации и подберём недвижимость с понятной логикой.</p><a href="#contact-form">Подробнее ↗</a></div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacts">
+        <div><p class="kicker">Начнём с разговора</p><h2>Расскажите,<br /><em>что вы ищете</em></h2><p>Оставьте контакты — менеджер Atlant Estate свяжется с вами в удобное время.</p><div class="contact-details"><a href="tel:+77027537510">+7 702 753 75 10</a><a href="mailto:atlantestate8@gmail.com">atlantestate8@gmail.com</a></div></div>
+        <form class="contact-form" id="contact-form"><label>Ваше имя<input name="name" type="text" placeholder="Как к вам обращаться?" required /></label><label>Телефон<input name="phone" type="tel" placeholder="+7 ___ ___ __ __" required /></label><label>Что вас интересует<select name="interest"><option>Покупка квартиры</option><option>Покупка дома</option><option>Коммерческая недвижимость</option><option>Продажа объекта</option></select></label><button class="button button-light" type="submit">Отправить заявку <span>↗</span></button><p class="form-message" aria-live="polite"></p></form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer"><div class="brand footer-brand"><img src="assets/atlant-logo.png" alt="Atlant Estate" /></div><div><span>Офис</span><p>г. Астана, ул. Аскара Токпанова, 33, 3 этаж</p></div><div><span>На связи</span><p><a href="tel:+77027537510">+7 702 753 75 10</a><br /><a href="mailto:atlantestate8@gmail.com">atlantestate8@gmail.com</a><br />Instagram — официальный профиль</p></div><div><span>Встречи</span><p>Свяжитесь с нами, чтобы согласовать удобное время.</p></div><div class="copyright">© 2026 Atlant Estate</div></footer>
+    <div class="mobile-contact"><a href="tel:+77027537510" aria-label="Позвонить">⌕</a><a href="https://wa.me/77027537510" target="_blank" rel="noreferrer">WhatsApp</a></div>
+    <script src="script.js"></script>
+  </body>
+</html>
